@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        /* Todo listesi için temel stil */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Her görev öğesi için stil */
+.todo-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Checkbox stilleri */
+.todo-list li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Görev adı stilleri */
+.todo-list li label {
+  flex: 1;
+  cursor: pointer;
+}
+
+/* Görev silme butonu stilleri */
+.todo-list li .delete-task {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: red;
+}
+    </style>
+    <ul class="todo-list">
+        <li>
+          <input type="checkbox" id="task1">
+          <label for="task1">Task 1</label>
+          <span class="delete-task">&#10005;</span>
+        </li>
+        <li>
+          <input type="checkbox" id="task2">
+          <label for="task2">Task 2</label>
+          <span class="delete-task">&#10005;</span>
+        </li>
+        <li>
+          <input type="checkbox" id="task3">
+          <label for="task3">Task 3</label>
+          <span class="delete-task">&#10005;</span>
+        </li>
+      </ul>
+</body>
+</html>

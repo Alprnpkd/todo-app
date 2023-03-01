@@ -21,16 +21,7 @@ font-family: 'Josefin Sans', sans-serif;
   
     
 }
-li {
-    background-color: hsl(235, 24%, 19%);
-    color: white;
-    list-style: none;
-    border-radius: 3px;
-   
-   
-   
-    text-align: left;
-}
+
 .todo {
     
     
@@ -42,20 +33,25 @@ li {
    
 }
 
-
+.active {
+    color: rgb(94, 94, 218) ;
+} 
 p {
-    color: white;
+    color: hsl(234, 11%, 52%);
+    cursor: pointer;
     
     
     
    
 }
+
 .todo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: absolute;
+    top: 80px;
     min-width: 600px;
     max-width: 600px;
 }
@@ -63,35 +59,78 @@ p {
 
 hr{
     opacity: 0.2;
+    
+}
+i {
+    color: white;
+    opacity: 0.7;
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    cursor: pointer;
+    
+}
+i:hover{
+    color: hsl(236, 33%, 92%);
 }
 
-input {
+
+  .input-dark {
     width: 600px;
     color: white;
-    padding: 10px 0;
+    padding: 15px 0;
     border-radius: 3px;
     margin-bottom: 20px;
     outline: none;
     border: none;
-  }
-  input[type=text] {
-   background-color:hsl(235, 24%, 19%) 
+   background-color:hsl(235, 24%, 19%) ;
+   font-size: 1.2rem;
+   padding-left: 40px;
    
   }
  
+  /* light input */
+  .input-light {
+    width: 600px;
+    color: black;
+    padding: 15px 0;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+   background-color:hsl(0, 0%, 98%) ;
+   font-size: 1.2rem;
+   padding-left: 40px;
+   
+  }
+ .todo-input {
+    display: flex;
+    position: relative;
+ }
+
 
 .filter-todo {
    
     display: flex;
-    
-    padding: 10px 10px;
+    font-size: 0.9rem;
+    padding: 15px 10px;
     text-align: center;
     justify-content: space-between;
     align-items: center;
   
      width: 100%;
-     background-color:hsl(235, 24%, 19%) 
+     background-color:hsl(235, 24%, 19%) ;
     
+}
+
+.filter-todo-light p{
+    color: hsl(236, 9%, 61%);
+}
+.filter-todo-light p:hover{
+    color: black;
+}
+.filter-todo-light .active {
+    color: rgb(80, 80, 176) ;
 }
 
 .head {
@@ -105,6 +144,9 @@ input {
    
    
    
+}
+p:hover {
+    color:hsl(236, 33%, 92%);
 }
 
 
@@ -131,6 +173,156 @@ text-align: center;
 
 }
 
+/* Todo listesi için temel stil */
+.todo-list-container {
+    width: 100%;
+}
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+
+  svg {
+    margin-right: 10px;
+    cursor: pointer;
+   
+    
+    
+  }
+ 
+  /* Her görev öğesi için stil */
+  .todo-list li {
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+    list-style: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+   border-bottom: 1px solid #dddddd39;
+   
+  }
+  
+  /* Checkbox stilleri */
+  .todo-list li input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: 5px;
+    -webkit-appearance: none; /* Safari ve Chrome için */
+    -moz-appearance: none; /* Firefox için */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s;
+  
+    
+  }
+  
+ 
+  .mode{
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked +label{
+    /* background: url("/images/icon-check.svg") no-repeat center ; */
+    text-decoration: line-through;
+    color: red;
+    
+   
+  }
+ 
+  
+  /* Görev adı stilleri */
+  .todo-list li label {
+    flex: 1;
+    cursor: pointer;
+    
+  }
+  
+  /* Görev silme butonu stilleri */
+ 
 
 /* checkbox style */
 
+/* light mode */
+
+/* Her görev öğesi için stil */
+.light-mode li {
+    background-color: hsl(0, 0%, 98%);
+    color: white;
+    list-style: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+   border-bottom: 1px solid #dddddd;
+   
+  }
+  .light-mode li input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: 5px;
+    -webkit-appearance: none; /* Safari ve Chrome için */
+    -moz-appearance: none; /* Firefox için */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s;
+  
+    
+  }
+  .light-mode li input[type=checkbox]:checked::before {
+    content: "\2713";
+    display: block;
+   
+   
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: black;
+    font-weight: 800;
+    
+    border-radius: 3px;
+  }
+  
+  /* Checkbox stilleri */
+  .light-mode li input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: 5px;
+    -webkit-appearance: none; /* Safari ve Chrome için */
+    -moz-appearance: none; /* Firefox için */
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: all 0.3s;
+  
+    
+  }
+  
+  input[type="checkbox"]:checked {
+    background: url("/images/icon-check.svg") no-repeat center ;
+    
+   
+  }
+  
+  /* Görev adı stilleri */
+  .light-mode li label {
+    flex: 1;
+    cursor: pointer;
+    color: black;
+  }
+
+ .light-icon{
+    color: black;
+ }
+ .light-icon:hover{
+    color: blue;
+ }
