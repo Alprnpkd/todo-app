@@ -11,16 +11,26 @@ body {
 font-family: 'Josefin Sans', sans-serif;
 
 }
-/* .bg-img {
+.bg-img-dark {
  
   width: 100%;
-  height: 400px;
+  height: 350px;
   background: url("/images/bg-desktop-dark.jpg") no-repeat  ;
   background-size: cover;
   
   object-fit:cover;
   position: relative;
-} */
+} 
+.bg-img-light {
+ 
+  width: 100%;
+  height: 350px;
+  background: url("/images/bg-desktop-light.jpg") no-repeat  ;
+  background-size: cover;
+  
+  object-fit:cover;
+  position: relative;
+} 
 
 .bg {
    
@@ -42,8 +52,7 @@ font-family: 'Josefin Sans', sans-serif;
    flex-direction: column;
    
 }
-
-.active {
+.filters p.active {
     color: rgb(94, 94, 218) ;
 } 
 p {
@@ -55,6 +64,30 @@ p {
    
 }
 
+.empty {
+  color: hsl(234, 11%, 52%);
+  padding-bottom:50px ;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+
+.empty-light {
+  color: black;
+  padding-bottom:50px ;
+  text-align: center;
+  padding-top: 50px;
+
+}
+
+.clear{
+  color: hsl(234, 11%, 52%);
+  cursor: pointer;
+}
+.clear:hover {
+  color: white;
+}
 .todo-container {
     display: flex;
     justify-content: center;
@@ -190,7 +223,7 @@ text-align: center;
 }
 .todo-list {
     list-style-type: none;
-    padding: 0;
+    padding:0;
     margin: 0;
     background-color: hsl(235, 24%, 19%);
    ;
@@ -341,7 +374,17 @@ text-align: center;
  }
 
 
-
+ .light-mode {
+  list-style-type: none;
+  padding:0;
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
+ ;
+  
+}
+.light-mode p:hover {
+  color: black;
+}
 
  /* Media Query*/
 
@@ -377,7 +420,28 @@ text-align: center;
 
 
 
-}@media only screen and (max-width: 375px) {
+}@media only screen and (max-width: 400px) {
+
+  .bg-img-dark {
+ 
+    width: 100%;
+    height: 270px;
+    background: url("/images/bg-mobile-dark.jpg") no-repeat  ;
+    background-size: cover;
+    
+    object-fit:cover;
+    position: relative;
+  } 
+  .bg-img-light {
+   
+    width: 100%;
+    height: 270px;
+    background: url("/images/bg-mobile-light.jpg") no-repeat  ;
+    background-size: cover;
+    
+    object-fit:cover;
+    position: relative;
+  } 
  
   .todo-container {
     display: flex;

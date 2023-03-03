@@ -19,8 +19,8 @@
 </head>
 <body>
 <div class="container">
-  <div class="bg-img">
-    <img class="bg" src="images/bg-desktop-dark.jpg" alt=""> 
+  <div class="bg-img-dark">
+    <!-- <img class="bg" src="images/bg-desktop-dark.jpg" alt="">  -->
   </div>
   <div class="todo">
     <div class="todo-container">
@@ -36,7 +36,7 @@
  <i class="fa-sharp fa-regular fa-paper-plane light light-m addbtn "></i>
 </div>
  <div class="todo-list-container">
-  <ul class="todo-list">
+  <ul class="todo-list ">
     
      
       <svg class="my-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
@@ -46,15 +46,15 @@
  
  
  </div>
- <div class="filter-todo filter">
+ <div class="filter-todo count">
 <p></p>
   <span class="filters">
     
-    <p class="active">All</p>
-    <p>Active</p>
-    <p> Completed</p>
+    <p class="active" id="all">All</p>
+    <p id="pending">Active</p>
+    <p id="completed"> Completed</p>
   </span>
-  <p>Clear Completed</p>
+  <span class="clear" id="clear">Clear Completed</span>
   <i class="fa-sharp fa-solid fa-paper-plane-top"></i>
 </div>
 

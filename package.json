@@ -4,8 +4,10 @@
   "description": "![Design preview for the Todo app coding challenge](./design/desktop-preview.jpg)",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+   
+    "dev": "vite", 
+    "build": "vite build", 
+    "preview": "vite preview" 
   },
   "keywords": [],
   "author": "",
