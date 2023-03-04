@@ -20,7 +20,7 @@ const bgImage = document.querySelector(".bg-img-dark") ;
 
 
 
-//
+//listeners
 
 changeMode.addEventListener("click",lightMode);
 addBtn.addEventListener("click",newTask) ;
@@ -186,7 +186,7 @@ function newTask(e){
    
    
 }
- function updateStatus(selectedTask) {
+function updateStatus(selectedTask) {
 
   let label = selectedTask.nextElementSibling ;
  let status ;
@@ -206,7 +206,7 @@ function newTask(e){
 
 }
 
- function deleteTask(id) {
+function deleteTask(id) {
 
     
   
@@ -214,7 +214,7 @@ function newTask(e){
    for(let index in taskList) {
 
     if(taskList[index].id == id) {
- console.log("tıklnadı");
+
         deleteId = index ;
         
 
@@ -229,7 +229,7 @@ function newTask(e){
 
 }
 
- function clearTask() {
+function clearTask() {
   for (let i = taskList.length - 1; i >= 0; i--) {
     if (taskList[i].status === "completed") {
       taskList.splice(i, 1);
