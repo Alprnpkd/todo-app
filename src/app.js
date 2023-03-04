@@ -99,7 +99,7 @@ const path = myIcon.querySelector("path");
 }
     
 else {
-    changeMode.src="icon-sun.svg";
+    changeMode.src="icon-sun-fc80f87a.svg";
     bgImage.className="bg-img-dark" ;
     body.style.backgroundColor="hsl(235, 21%, 11%)" ;
     changeMode.className="dark" ;
