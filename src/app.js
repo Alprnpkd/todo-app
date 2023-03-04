@@ -35,7 +35,7 @@ document.addEventListener("keydown", function(event) {
 //Task Array 
 
 
-const taskList = [
+let taskList = [
   // {"id":1,"taskName":"Görev 1" ,"status":"pending"},
   // {"id":2,"taskName":"Görev 2" ,"status":"completed"},
   // {"id":3,"taskName":"Görev 3" ,"status":"pending"},
@@ -56,6 +56,14 @@ for(let p of filters) {
   });
  
 }
+// Page Load 
+
+
+
+if(localStorage.getItem("taskList") !== null) {
+         taskList =JSON.parse(localStorage.getItem("taskList")) ;
+}
+displayTask("all");
 
 
 
@@ -110,7 +118,7 @@ else {
 
 
 
-displayTask("all");
+
 
 function displayTask(filter) {
     
@@ -166,11 +174,12 @@ function newTask(e){
   else{
     taskList.push({"id" : taskList.length+1,"taskName" : taskInput.value ,"status" :"pending"});
     displayTask( document.querySelector(".filters p.active").id);
+     localStorage.setItem("taskList",JSON.stringify(taskList)) ;
     taskInput.value="" ;
   }
   
 
-  event.preventDefault();
+  e.preventDefault();
   
  
 
@@ -192,6 +201,8 @@ function updateStatus(selectedTask) {
       task.status = status ;
     }
   }
+  displayTask(document.querySelector(".filters p.active").id);
+  localStorage.setItem("taskList",JSON.stringify(taskList)) ;
 
 }
 
@@ -212,6 +223,7 @@ function deleteTask(id) {
    }
   
    taskList.splice(deleteId, 1) ;
+   localStorage.setItem("taskList",JSON.stringify(taskList)) ;
    displayTask( document.querySelector(".filters p.active").id);
 
 
@@ -224,6 +236,10 @@ function clearTask() {
       
     }
   }
+  localStorage.setItem("taskList",JSON.stringify(taskList)) ;
+  let left = ` <p>${taskList.length} items left</p>
+ `;
+ taskCount.querySelector("p").innerHTML = left;
   displayTask( document.querySelector(".filters p.active").id);
 
 

@@ -11,6 +11,8 @@ body {
 font-family: 'Josefin Sans', sans-serif;
 
 }
+
+
 .bg-img-dark {
  
   width: 100%;
@@ -119,7 +121,9 @@ i:hover{
 
 
   .input-dark {
+    
     width: 600px;
+    
     color: white;
     padding: 15px 0;
     border-radius: 3px;
@@ -220,13 +224,16 @@ text-align: center;
 /* Todo listesi için temel stil */
 .todo-list-container {
     width: 100%;
+   
+   
 }
 .todo-list {
     list-style-type: none;
     padding:0;
     margin: 0;
     background-color: hsl(235, 24%, 19%);
-   ;
+   overflow:hidden;
+   
     
   }
 
@@ -416,6 +423,20 @@ text-align: center;
  padding-left: 40px;
  
 }
+.input-light {
+  width: 500px;
+  color: black;
+  padding: 15px 0;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+ background-color:hsl(0, 0%, 98%) ;
+ font-size: 1.2rem;
+ padding-left: 40px;
+ 
+}
+
 
 
 
