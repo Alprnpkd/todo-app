@@ -81,7 +81,7 @@ const path = myIcon.querySelector("path");
 
  if(changeMode.classList.contains("dark")) {
     path.setAttribute("fill", "#297C6B");
-    changeMode.src="/images/icon-moon.svg" ; 
+    changeMode.src="./images/icon-moon.svg" ; 
     changeMode.style.transition="1s" ;
      bgImage.className="bg-img-light" ;
      bgImage.style.transition="1s" ;
