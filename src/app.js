@@ -81,7 +81,7 @@ const path = myIcon.querySelector("path");
 
  if(changeMode.classList.contains("dark")) {
     path.setAttribute("fill", "#297C6B");
-    changeMode.src="icon-moon.svg" ; 
+    changeMode.src="./images/icon-moon.svg" ; 
     changeMode.style.transition="1s" ;
      bgImage.className="bg-img-light" ;
      bgImage.style.transition="1s" ;
@@ -99,7 +99,7 @@ const path = myIcon.querySelector("path");
 }
     
 else {
-    changeMode.src="/dist/assets/icon-sun-fc80f87a-fc80f87a.svg";
+    changeMode.src="./images/icon-sun.svg";
     bgImage.className="bg-img-dark" ;
     body.style.backgroundColor="hsl(235, 21%, 11%)" ;
     changeMode.className="dark" ;
